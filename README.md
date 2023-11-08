@@ -1,6 +1,6 @@
 ===============================  
  work in progres - cheat sheet  
-  .MD -- *formatting* :  
+  .MD -- *formatting* :   
 
 This text is ***really important***!  
 **fat-text**  
