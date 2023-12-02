@@ -1,65 +1,5 @@
-===============================  
- work in progres - cheat sheet  
-  .MD -- *formatting* :   
-
-This text is ***really important***!  
-**fat-text**  
-*italic*  
-
-  # Header - big  
-  ...  
-  ###### Header - small   
-
----
-
-*LISTS*:  
-1. step one
-2. step two
-
-* Item one
-* Item two
-
-- First item
-- Second item
-- Third item
-    - Indented item
-    - Indented item
-- Fourth item
- 
-*CODE*:  
-`Inlinecode`  
-
-```
-Beispiel für 
-einen Codeblock.
-```
-
-*COMMENTS*:  
-> Blockzitate müssen mit einer  
-> Leerzeile beginnen  
-> und enden  
-
-> Nested code  
-> block :  
->> example  
-
-> #### ADVANCED EXAMPLE!  
->  
-> - Beautiful  
-> - Nested  
->  
->  *COMMENTS* are **very ***nice*** to read**.  
-
-
-*LINKS*:  
-![Optionaler Alternativtext, falls sich das Bild nicht laden lässt](http://www.sampleurl.com/logo.png)  
-[Text to show on a link](http://www.sampleurl.com)  
-[![Alt-Text](imageurl)](linkurl)  
-
-===============================
-
-# Uebung-020  --  ...
-
+# Uebung-032  --  Logarithmus Dualis
+<!--
 ## Lernziele:
 
 ## Aufgabenstellung:
@@ -74,12 +14,41 @@ einen Codeblock.
 
 
 
-
+-->
 -------------------------------
 # **SPOILER**
 
-## PAP-Designer:
+```c#
+namespace LogarithmusDualis
+{
+  internal class Programm
+  {
+    static void Main()
+    {
+      string userInput;
+      int userInteger,
+          originalInput,
+          output = 0;
 
-## Visual Studio:
+      Console.Write("\n       LogarithmusDualis        " +
+                    "\n================================" +
+                    "\n Geben Sie eine ganze Zahl ein." +
+                    "\n ");
+      userInput = Console.ReadLine();
+      int.TryParse(userInput, out userInteger);
 
-## Ausgabe:
+      originalInput = userInteger;
+      while (userInteger / 2 > 0)
+      {
+        userInteger = userInteger / 2;
+        output++;
+      }
+      Console.Write($"\n {originalInput} kann {output} x durch Zwei dividiert werden. ");
+
+      Console.Write("\nZum Beenden bitte Eingabetaste drücken ...");
+      Console.ReadLine();
+      Console.Clear();
+    }
+  }
+}
+```
